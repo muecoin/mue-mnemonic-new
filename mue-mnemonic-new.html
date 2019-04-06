@@ -105914,8 +105914,9 @@ window.Entropy = new (function() {
             var option = $("<option>");
             option.attr("value", i);
             option.text(network.name);
-            if (network.name == "MUE - MonetaryUnit") {
+            if (network.name == "Change me") {
                 option.prop("selected", true);
+                                                 option.prop("disabled", true);
             }
             DOM.phraseNetwork.append(option);
         }
@@ -106431,7 +106432,7 @@ window.Entropy = new (function() {
 
     var networks = [
         {
-            name: "BTC - Bitcoin",
+            name: "Change me",
             onSelect: function() {
                 network = bitcoinjs.bitcoin.networks.bitcoin;
                 setHdCoin(66);
